@@ -1,0 +1,16 @@
+html{
+    position: relative;
+}
+html::after{
+    content: "";
+    background: url("https://hoodline.imgix.net/uploads/story/image/702262/FLICKR_Chicago_Downtown.jpg?auto=format");
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

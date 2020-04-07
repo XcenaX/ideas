@@ -1,0 +1,78 @@
+<div class="hexlet-markdown-body overflow-hidden p-2 p-md-4">
+<h1 class="mb-4">HTML</h1>
+<p>HTML — это первое, с чем сталкиваются начинающие веб-разработчики.</p>
+
+<p>Когда мы открываем страницы сайтов, перед нами, обычно, красивые картинки, текст, иногда реклама и другие элементы. Но если вызвать контекстное меню и нажать на пункт «Исходный код страницы» (в зависимости от браузера и языка системы называется по-разному), то мы увидим примерно следующее:</p>
+<pre class="hljs"><code><span style="color: #000080">&lt;div</span> <span style="color: #008080">class=</span><span style="color: #d14">"navbar-collapse collapse"</span> <span style="color: #008080">id=</span><span style="color: #d14">"navbarResponsive"</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;a</span> <span style="color: #008080">aria-hidden=</span><span style="color: #d14">"true"</span> <span style="color: #008080">class=</span><span style="color: #d14">"navbar-brand mr-4"</span> <span style="color: #008080">href=</span><span style="color: #d14">""/"</span><span style="color: #000080">&gt;</span>Hexlet<span style="color: #000080">&lt;/a&gt;</span>
+  <span style="color: #000080">&lt;ul</span> <span style="color: #008080">class=</span><span style="color: #d14">"navbar-nav mr-auto"</span><span style="color: #000080">&gt;</span>
+    <span style="color: #000080">&lt;li</span> <span style="color: #008080">class=</span><span style="color: #d14">"nav-item"</span><span style="color: #000080">&gt;</span>
+      <span style="color: #000080">&lt;a</span> <span style="color: #008080">class=</span><span style="color: #d14">"nav-link"</span> <span style="color: #008080">href=</span><span style="color: #d14">"/my"</span><span style="color: #000080">&gt;&lt;span</span> <span style="color: #008080">class=</span><span style="color: #d14">"fa fa-map-marker hexlet-header-icon"</span><span style="color: #000080">&gt;&lt;/span&gt;</span>
+        Мой Хекслет
+      <span style="color: #000080">&lt;/a&gt;</span>
+    <span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;li</span> <span style="color: #008080">class=</span><span style="color: #d14">"nav-item"</span><span style="color: #000080">&gt;&lt;a</span> <span style="color: #008080">class=</span><span style="color: #d14">"nav-link"</span> <span style="color: #008080">href=</span><span style="color: #d14">"/courses"</span><span style="color: #000080">&gt;&lt;span</span> <span style="color: #008080">class=</span><span style="color: #d14">"fa fa-university hexlet-header-icon"</span><span style="color: #000080">&gt;&lt;/span&gt;</span>
+      Курсы
+      <span style="color: #000080">&lt;/a&gt;</span>
+    <span style="color: #000080">&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;/ul&gt;</span>
+<span style="color: #000080">&lt;/div&gt;</span>
+</code></pre>
+<p>Именно такой код и называется HTML. Hypertext Markup Language (HTML) — это язык разметки для создания веб-страниц или веб-приложений. Пусть вас не смущает слово "язык", HTML не является языком программирования. Другими словами, на HTML не программируют, как иногда думают начинающие веб-разработчики.</p>
+
+<p><em>Формально языком программирования называют только тот язык, который является <a href="https://ru.wikipedia.org/wiki/%D0%9F%D0%BE%D0%BB%D0%BD%D0%BE%D1%82%D0%B0_%D0%BF%D0%BE_%D0%A2%D1%8C%D1%8E%D1%80%D0%B8%D0%BD%D0%B3%D1%83" target="_blank">Тьюринг-полным</a>.</em></p>
+
+<p>Проще всего понять идею HTML на примере редактирования текста в редакторе. Когда нам необходимо выделить текст жирным, создать список или вставить таблицу, мы «размечаем» текст. В обычных текстовых редакторах это делается визуально. Мы выделяем текст, затем нажимаем кнопку "Жирный", и текст становится жирным.</p>
+
+<p>Так мы видим текст, когда открываем наш файл через специализированный редактор, понимающий его формат. Но внутри самого файла, конечно же, нет никакого жирного текста. Просто тот блок, который мы видим как жирный, помечен специальным образом. При выводе разметка превращается в визуальные выделения.</p>
+
+<p>В HTML такие выделения делаются с помощью тегов. Теги — своеобразные кирпичики, из которых строится страница. Например, для подчеркивания текста используется тег <code>u</code> и выглядит это так:</p>
+<pre class="hljs"><code><span style="color: #000080">&lt;u&gt;</span>текст будет подчеркнутым<span style="color: #000080">&lt;/u&gt;</span>
+</code></pre>
+<p>Тег <code>u</code> относится к парным тегам. Кроме открывающего тега <code>&lt;u&gt;</code> он требует наличия закрывающего тега: <code>&lt;/u&gt;</code>. Так браузер понимает, когда нужно перестать делать текст подчеркнутым.</p>
+
+<p>Подобных тегов в HTML довольно много. С помощью них, например, можно создавать таблицы, списки, заголовки, вставлять картинки, ссылки и тому подобное. Некоторые элементы, такие как списки, требуют использования сразу нескольких тегов, вложенных друг в друга. Еще есть теги, которые для корректной работы нуждаются в атрибутах.</p>
+<pre class="hljs"><code><span style="color: #999988;font-style: italic">&lt;!-- Список из двух элементов --&gt;</span>
+<span style="color: #000080">&lt;ul&gt;</span>
+  <span style="color: #000080">&lt;li&gt;</span>one<span style="color: #000080">&lt;/li&gt;</span>
+  <span style="color: #000080">&lt;li&gt;</span>two<span style="color: #000080">&lt;/li&gt;</span>
+<span style="color: #000080">&lt;/ul&gt;</span>
+</code></pre>
+<p>Перед тем, как двигаться дальше, давайте попробуем создать нашу первую страничку. Вы увидите, насколько это тривиально.</p>
+
+<p>Создайте файл <code>index.html</code> в любом удобном месте вашего компьютера. Добавьте туда html код, указанный ниже, а затем откройте файл в браузере.</p>
+<pre class="hljs"><code><span style="color: #999999;font-weight: bold">&lt;!DOCTYPE html&gt;</span>
+<span style="color: #000080">&lt;html&gt;</span>
+  <span style="color: #000080">&lt;head&gt;</span>
+    <span style="color: #000080">&lt;title&gt;</span>Title<span style="color: #000080">&lt;/title&gt;</span>
+    <span style="color: #000080">&lt;meta</span> <span style="color: #008080">name=</span><span style="color: #d14">"description"</span> <span style="color: #008080">content=</span><span style="color: #d14">"My first page"</span><span style="color: #000080">&gt;</span>
+  <span style="color: #000080">&lt;/head&gt;</span>
+  <span style="color: #000080">&lt;body&gt;</span>
+    <span style="color: #000080">&lt;h1&gt;</span>Hello, World!<span style="color: #000080">&lt;/h1&gt;</span>
+    <span style="color: #000080">&lt;ul&gt;</span>
+      <span style="color: #000080">&lt;li&gt;</span>One<span style="color: #000080">&lt;/li&gt;</span>
+      <span style="color: #000080">&lt;li&gt;</span>Two<span style="color: #000080">&lt;/li&gt;</span>
+    <span style="color: #000080">&lt;/ul&gt;</span>
+  <span style="color: #000080">&lt;/body&gt;</span>
+<span style="color: #000080">&lt;/html&gt;</span>
+</code></pre>
+<p>Поздравляю, вы сделали свою первую страницу! Если захотите потренироваться, то это всегда можно сделать здесь <a href="https://plnkr.co/edit/" target="_blank">https://plnkr.co/edit/</a> (другие подобные сервисы легко гуглятся).</p>
+
+<p>Подобным образом вы можете создать сколько угодно страниц. Добавив на эти страницы ссылки, которые сплетают их в единое целое, мы получим статический сайт. Именно из-за ссылок веб называется гипертекстовым. Ссылки выглядят так:</p>
+<pre class="hljs"><code><span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #d14">"/about"</span><span style="color: #000080">&gt;</span>О компании<span style="color: #000080">&lt;/a&gt;</span>
+<span style="color: #000080">&lt;a</span> <span style="color: #008080">href=</span><span style="color: #d14">"https://hexlet.io"</span><span style="color: #000080">&gt;</span>Хекслет<span style="color: #000080">&lt;/a&gt;</span>
+</code></pre>
+<p>В данном случае мы воспользовались атрибутом <code>href</code> тега <code>a</code> и подставили туда место для перехода. Как видите, это может быть страница на том же сайте или ссылка на внешний ресурс.</p>
+
+<p>HTML — не единственный язык разметки. Например, текст этого урока я пишу с использованием разметки <a href="https://ru.wikipedia.org/wiki/Markdown" target="_blank">Markdown</a>. Она обладает более скромными возможностями, чем HTML, но при этом сильно удобнее для простых текстов, которые пишутся вручную и требуют только базового форматирования. Более того, на Хекслете Маркдаун используется повсеместно. Практически в любом месте, где вы можете написать нам, <a href="https://guides.hexlet.io/markdown/" target="_blank">можно использовать маркдаун</a>.</p>
+<pre class="hljs"><code><span style="color: #aaaaaa">### Заголовок</span>
+<span style="background-color: #f8f8f8">
+*</span> Первый элемент списка
+<span style="background-color: #f8f8f8">*</span> Второй элемент списка
+</code></pre>
+<p>Но браузер не понимает разметку Markdown. Как же она работает? Все очень просто: сначала Markdown транслируется в HTML, который уже отдается браузеру, а браузер уже выполняет свою главную задачу - отрисовывает страницу. Трансляция производится программным способом, но для понимания общего принципа работы это не важно.</p>
+
+<p>Важно понимать, что страница, созданная с использованием только HTML, статична, то есть на ней ничего не двигается, не выезжает, не меняется при наведении и вообще никак себя не выдает (на самом деле есть некоторые элементы, которые добавляют каплю динамизма, но суть от этого не меняется). Динамизм появляется благодаря CSS и JavaScript.</p>
+
+<p>HTML, как и большинство языков разметки, очень прост. Учить его "от и до" не нужно. Главное, понять общую схему работы и научиться применять правильные теги. Этого достаточно для старта. Хороший справочник по html можно найти на <a href="https://developer.mozilla.org/ru/docs/Web/HTML/Element" target="_blank">developer.mozilla.org</a>.</p>
+</div>
